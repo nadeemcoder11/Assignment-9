@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Login Page</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ================= FACEBOOK LOGIN ================= */
+
+        .facebook-page {
+            min-height: 100vh;
+            background-color: #f0f2f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 120px;
+            padding: 40px;
+        }
+
+        .facebook-left {
+            width: 380px;
+        }
+
+        .facebook-logo {
+            color: #1877f2;
+            font-size: 46px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .facebook-text {
+            font-size: 20px;
+            line-height: 1.25;
+            margin: 0;
+        }
+
+        .facebook-box {
+            width: 370px;
+            background-color: white;
+            padding: 14px;
+            border-radius: 7px;
+            box-shadow: 0 2px 10px #d0d0d0;
+        }
+
+        .facebook-box input {
+            width: 100%;
+            height: 37px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .login-button {
+            width: 100%;
+            height: 37px;
+            border: none;
+            border-radius: 4px;
+            background-color: #1877f2;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .forgot {
+            display: block;
+            text-align: center;
+            color: #1877f2;
+            text-decoration: none;
+            font-size: 10px;
+            margin: 12px 0;
+        }
+
+        .line {
+            border-top: 1px solid #dddddd;
+            margin: 12px 0 20px;
+        }
+
+        .create-button {
+            display: block;
+            width: 130px;
+            margin: auto;
+            padding: 10px 5px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background-color: #36a420;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+
+        /* ================= SIGN IN / SIGN UP ================= */
+
+        .signin-page {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+
+        .signin-container {
+            width: 850px;
+            min-height: 500px;
+            display: flex;
+            box-shadow: 0 0 5px #dddddd;
+        }
+
+        .signin-left {
+            width: 50%;
+            background-color: white;
+            text-align: center;
+            padding: 55px 45px;
+        }
+
+        .signin-left h1 {
+            margin: 0 0 25px;
+            font-size: 30px;
+        }
+
+        .social-icons {
+            margin-bottom: 15px;
+        }
+
+        .social-icons span {
+            display: inline-flex;
+            width: 32px;
+            height: 32px;
+            border: 1px solid #dddddd;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            margin: 0 5px;
+            font-weight: bold;
+            color: #555555;
+        }
+
+        .account-text {
+            color: #777777;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .signin-input {
+            width: 100%;
+            height: 35px;
+            border: none;
+            background-color: #edf0f4;
+            margin-bottom: 12px;
+            padding: 10px;
+        }
+
+        .forgot-password {
+            color: #555555;
+            font-size: 13px;
+            margin: 10px 0 20px;
+        }
+
+        .signin-button {
+            width: 120px;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            background-color: #ff512f;
+            color: white;
+            font-weight: bold;
+        }
+
+        .signup-right {
+            width: 50%;
+            background: linear-gradient(135deg, #ff3b30, #ff4438);
+            color: white;
+            text-align: center;
+            padding: 125px 45px;
+        }
+
+        .signup-right h1 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .signup-right p {
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        .signup-button {
+            display: inline-block;
+            width: 125px;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 800px) {
+
+            .facebook-page {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .signin-container {
+                width: 95%;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .signin-container {
+                flex-direction: column;
+            }
+
+            .signin-left,
+            .signup-right {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- FACEBOOK STYLE LOGIN -->
+
+    <section class="facebook-page">
+
+        <div class="facebook-left">
+
+            <div class="facebook-logo">facebook</div>
+
+            <p class="facebook-text">
+                Connect with friends and the world
+                around you on Facebook.
+            </p>
+
+        </div>
+
+
+        <div class="facebook-box">
+
+            <input type="text" placeholder="Email or phone number">
+
+            <input type="password" placeholder="Password">
+
+            <button class="login-button">Login</button>
+
+            <a href="#" class="forgot">Forgot password?</a>
+
+            <div class="line"></div>
+
+            <a href="#" class="create-button">
+                Create new account
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- SIGN IN / SIGN UP -->
+
+    <section class="signin-page">
+
+        <div class="signin-container">
+
+
+            <div class="signin-left">
+
+                <h1>Sign in</h1>
+
+                <div class="social-icons">
+                    <span>f</span>
+                    <span>G+</span>
+                    <span>in</span>
+                </div>
+
+                <div class="account-text">
+                    or use your account
+                </div>
+
+                <input
+                    type="text"
+                    class="signin-input"
+                    placeholder="Email">
+
+                <input
+                    type="password"
+                    class="signin-input"
+                    placeholder="Password">
+
+                <div class="forgot-password">
+                    Forgot your password?
+                </div>
+
+                <button class="signin-button">
+                    SIGN IN
+                </button>
+
+            </div>
+
+
+            <div class="signup-right">
+
+                <h1>Hello, Friend!</h1>
+
+                <p>
+                    Enter your personal details and start
+                    journey with us
+                </p>
+
+                <a href="#" class="signup-button">
+                    SIGN UP
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</body>
+</html>
